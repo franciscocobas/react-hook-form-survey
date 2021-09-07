@@ -1,38 +1,109 @@
-.App {
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --main-black: #050505;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+body {
+  background: var(--main-black);
+  font-size: 18px;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.main-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.header {
+  display: flex;
+  align-items: center;
+}
+.logo {
+  width: 10rem;
+  height: 10rem;
+}
+h1 {
+  margin-left: 15rem;
+}
+.description {
+  width: 600px;
+  margin: 2rem auto;
+}
+.error {
+  border: 3px solid rgb(172, 68, 68);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+form {
+  background: #ffffff20;
+  padding: 3rem 0;
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+form > div {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+form input,
+form select {
+  height: 3rem;
+  padding: 0 1rem;
+  margin: 1rem 0;
+  border-radius: 5px;
+}
+form textarea {
+  height: 10rem;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 5px;
+}
+form button {
+  height: 3rem;
+  background: #e72f73;
+  margin: 0 3rem;
+  color: white;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+form .platform-icons-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+form .consent-container {
+  display: flex;
+  align-items: center;
+}
+form p {
+  text-align: center;
+}
+form .consent-container input {
+  width: 2rem;
+  height: 2rem;
+}
+form .consent-container p {
+  margin-left: 1rem;
+}
+form button[type='submit'] {
+  font-weight: bold;
+  margin-top: 1rem;
+}
+form button[type='button'] {
+  height: 3.5rem;
+  width: 3.5rem;
+  background: white;
+  margin: 0;
+}
+form button[type='button'].active {
+  background: #e72f73;
+}
+form button[type='button'] svg {
+  width: 2rem;
+  height: 2rem;
+}
+form button[type='button'].active svg {
+  fill: white;
 }
